@@ -13,7 +13,7 @@ GAME RULES:
 var mainScores,roundScore,activePlayer;
 mainScores=[0,0];
 roundScore=0;
-activePlayer=1;  
+activePlayer=0;  
   // 0 for player1 and 1 for player 2
 
 
@@ -47,7 +47,16 @@ document.querySelector('.btn-roll').addEventListener('click',function () {
 
 });
 
-// document.querySelector('.btn-hold').addEventListener('click',function (){
+document.querySelector('.btn-hold').addEventListener('click',function (){
 
-//   //if hold is press
-// });
+  document.getElementById('score-'+ activePlayer).textContent= roundScore;
+  mainScores[activePlayer] += roundScore;
+  document.getElementById('score-'+  activePlayer).textContent= mainScores[activePlayer];
+
+
+  document.querySelector('.player-'+ activePlayer +'-panel').classList.remove('active');
+  roundScore=0;
+  document.querySelector('#current-'+ activePlayer).textContent = roundScore;
+  activePlayer === 0 ? activePlayer =1 :activePlayer = 0;
+  document.querySelector('.player-'+ activePlayer+'-panel').classList.add('active');
+ });

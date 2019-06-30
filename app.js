@@ -13,10 +13,24 @@ GAME RULES:
 var mainScores,roundScore,activePlayer,dice;
 mainScores=[0,0];
 roundScore=0;
-activePlayer=0;
-dice= Math.floor((Math.random())*6+1);
+activePlayer=1;  
+dice=6;   // 0 for player1 and 1 for player 2
+
 console.log(dice);
-co
-for (const item in object) {
+document.querySelector('#current-'+ activePlayer).textContent = dice;
+document.querySelector('.dice').style.display='none';
+document.getElementById('score-0').textContent='0';
+document.getElementById('score-1').textContent='0';
+document.getElementById('current-0').textContent='0';
+document.getElementById('current-1').textContent='0';
+document.querySelector('.btn-roll').addEventListener('click',function () {
+  //Generate random number
+  dice= Math.ceil((Math.random())*6);
+  //display numbeer o dice
+  var diceDOM=document.querySelector('.dice')
+  diceDOM.style.display='block';
+  diceDOM.src='dice-'+dice+'.png';
   
-}
+  //update the score iff dice number is not 1
+
+})

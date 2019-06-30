@@ -1,0 +1,23 @@
+{
+  "name": "dice_game",
+  "version": "1.0.0",
+  "description": "dice_game for two players made using pure  javascript without using anyframeworks",
+  "main": "app.js",
+  "scripts": {
+    "deploy": "gh-pages -d DICE_GAME"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coding-clown/dice_game.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/coding-clown/dice_game/issues"
+  },
+  "homepage": "https://github.com/coding-clown/dice_game",
+  "dependencies": {
+    "gh-pages":"2.0.1"
+  }
+}
